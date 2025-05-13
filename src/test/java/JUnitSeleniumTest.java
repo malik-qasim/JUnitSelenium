@@ -14,12 +14,12 @@ class JUnitSeleniumTest {
 
 	@Test
 	void test_login_with_incorrect_credentials() {
-		System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver-linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver-linux64/");
 		ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");               // Run in headless mode
-        options.addArguments("--no-sandbox");             // For Ubuntu
-        options.addArguments("--disable-dev-shm-usage");  // Overcome limited resource problems
-        options.addArguments("--disable-gpu");            // GPU issues
+        	options.addArguments("--headless");               // Run in headless mode
+        	options.addArguments("--no-sandbox");             // For Ubuntu
+        	options.addArguments("--disable-dev-shm-usage");  // Overcome limited resource problems
+        	options.addArguments("--disable-gpu");            // GPU issues
 		WebDriver driver = new ChromeDriver(options);
 		driver.navigate().to("https://myrealtordash.clareityiam.net/idp/login");
 		driver.findElement(By.name("username")).sendKeys("1234567");
