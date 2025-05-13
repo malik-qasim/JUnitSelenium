@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.*;
+cimport static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class JUnitSeleniumTest {
 
 	@Test
 	void test_login_with_incorrect_credentials() {
-		System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver-linux64/Chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/home/ubuntu/chromedriver-linux64/chromedriver");
 		ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");               // Run in headless mode
         options.addArguments("--no-sandbox");             // For Ubuntu
