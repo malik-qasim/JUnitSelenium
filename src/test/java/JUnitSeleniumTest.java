@@ -14,7 +14,7 @@ class JUnitSeleniumTest {
 
 	@Test
 	void test_login_with_incorrect_credentials() {
-		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
         	options.addArguments("--headless");               // Run in headless mode
         	options.addArguments("--no-sandbox");             // For Ubuntu
