@@ -20,7 +20,8 @@ class JUnitSeleniumTest {
         	options.addArguments("--no-sandbox");             // For Ubuntu
         	options.addArguments("--disable-dev-shm-usage");  // Overcome limited resource problems
         	options.addArguments("--disable-gpu");            // GPU issues
-		options.addArguments("--user-data-dir=/tmp/chrome-user-data");
+		String userDataDir = "/tmp/chrome-profile-" + UUID.randomUUID();
+        	options.addArguments("--user-data-dir=" + userDataDir);
 		WebDriver driver = new ChromeDriver(options);
 		driver.navigate().to("https://myrealtordash.clareityiam.net/idp/login");
 		driver.findElement(By.name("username")).sendKeys("1234567");
